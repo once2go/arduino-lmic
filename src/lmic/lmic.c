@@ -2217,9 +2217,16 @@ void LMIC_reset (void) {
     LMIC.ping.dr      =  DR_PING;   // ditto
     LMIC.ping.intvExp =  0xFF;
 #endif // !DISABLE_PING
+
 #if defined(CFG_us915)
-    initDefaultChannels();
+   //initDefaultChannels();
+   mapChannels(0,0x00FF);
+   mapChannels(1,0x0000);
+   mapChannels(2,0x0000);
+   mapChannels(3,0x0000);
+   mapChannels(4,0x0001);
 #endif
+
     DO_DEVDB(LMIC.devaddr,      devaddr);
     DO_DEVDB(LMIC.devNonce,     devNonce);
     DO_DEVDB(LMIC.dn2Dr,        dn2Dr);

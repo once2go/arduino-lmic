@@ -163,6 +163,7 @@ void setup() {
     os_init();
     // Reset the MAC state. Session and pending data transfers will be discarded.
     LMIC_reset();
+    LMIC_setClockError(MAX_CLOCK_ERROR * 1 / 100);
 
     // Start job (sending automatically starts OTAA too)
     do_send(&sendjob);

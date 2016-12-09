@@ -115,15 +115,15 @@ enum { DR_DFLTMIN = DR_SF8C };
 enum { DR_PAGE = DR_PAGE_US915 };
 
 // Default frequency plan for US 915MHz
-enum { US915_125kHz_UPFBASE = 902300000,
-       US915_125kHz_UPFSTEP =    200000,
-       US915_500kHz_UPFBASE = 903000000,
-       US915_500kHz_UPFSTEP =   1600000,
-       US915_500kHz_DNFBASE = 923300000,
-       US915_500kHz_DNFSTEP =    600000
+enum { US915_125kHz_UPFBASE = 916800000,
+      US915_125kHz_UPFSTEP =    200000,
+      US915_500kHz_UPFBASE = 917500000,
+      US915_500kHz_UPFSTEP =   1600000,
+      US915_500kHz_DNFBASE = 923300000,
+      US915_500kHz_DNFSTEP =    600000
 };
-enum { US915_FREQ_MIN = 902000000,
-       US915_FREQ_MAX = 928000000 };
+enum { US915_FREQ_MIN = 916000000,
+      US915_FREQ_MAX = 928000000 };
 
 enum { CHNL_PING         = 0 }; // used only for default init of state (follows beacon - rotating)
 enum { FREQ_PING         = US915_500kHz_DNFBASE + CHNL_PING*US915_500kHz_DNFSTEP };  // default ping freq
